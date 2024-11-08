@@ -153,7 +153,7 @@ namespace cajero_automatico
 
         }
 
-        private void grpBox_Enter(object sender, EventArgs e)
+        private void grpBox_Click(object sender, EventArgs e)
         {
             FrmCuentaPesos frmCuentaPesos = new FrmCuentaPesos(lblNumCuentaPes.Text);
             frmCuentaPesos.Show();

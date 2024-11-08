@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtExtraerMonto = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -52,12 +52,12 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Indique la cantidad de dinero a extraer";
             // 
-            // textBox1
+            // txtExtraerMonto
             // 
-            this.textBox1.Location = new System.Drawing.Point(96, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtExtraerMonto.Location = new System.Drawing.Point(96, 108);
+            this.txtExtraerMonto.Name = "txtExtraerMonto";
+            this.txtExtraerMonto.Size = new System.Drawing.Size(185, 20);
+            this.txtExtraerMonto.TabIndex = 2;
             // 
             // button1
             // 
@@ -67,6 +67,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmExtraer
             // 
@@ -74,7 +75,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(408, 237);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtExtraerMonto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmExtraer";
@@ -88,7 +89,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtExtraerMonto;
         private System.Windows.Forms.Button button1;
     }
 }
