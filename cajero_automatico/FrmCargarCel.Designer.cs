@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMovistar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnClaro = new System.Windows.Forms.Button();
+            this.btnPersonal = new System.Windows.Forms.Button();
+            this.btnTuenti = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn0 = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -50,7 +50,7 @@
             this.btn1 = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNumeroCel = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,16 +64,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Recargar Celular";
             // 
-            // button1
+            // btnMovistar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.MediumSpringGreen;
-            this.button1.Location = new System.Drawing.Point(83, 202);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 157);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "MOVISTAR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnMovistar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMovistar.ForeColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnMovistar.Location = new System.Drawing.Point(83, 202);
+            this.btnMovistar.Name = "btnMovistar";
+            this.btnMovistar.Size = new System.Drawing.Size(184, 157);
+            this.btnMovistar.TabIndex = 1;
+            this.btnMovistar.Text = "MOVISTAR";
+            this.btnMovistar.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -85,43 +85,43 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Elija la compañía:";
             // 
-            // button2
+            // btnClaro
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Crimson;
-            this.button2.Location = new System.Drawing.Point(307, 202);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(184, 157);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Claro";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnClaro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClaro.ForeColor = System.Drawing.Color.Crimson;
+            this.btnClaro.Location = new System.Drawing.Point(307, 202);
+            this.btnClaro.Name = "btnClaro";
+            this.btnClaro.Size = new System.Drawing.Size(184, 157);
+            this.btnClaro.TabIndex = 3;
+            this.btnClaro.Text = "Claro";
+            this.btnClaro.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnPersonal
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button3.Location = new System.Drawing.Point(83, 401);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(184, 157);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Personal";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonal.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnPersonal.Location = new System.Drawing.Point(83, 401);
+            this.btnPersonal.Name = "btnPersonal";
+            this.btnPersonal.Size = new System.Drawing.Size(184, 157);
+            this.btnPersonal.TabIndex = 4;
+            this.btnPersonal.Text = "Personal";
+            this.btnPersonal.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnTuenti
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.HotPink;
-            this.button4.Location = new System.Drawing.Point(307, 401);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(184, 157);
-            this.button4.TabIndex = 5;
-            this.button4.Text = ";) tuenti";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnTuenti.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTuenti.ForeColor = System.Drawing.Color.HotPink;
+            this.btnTuenti.Location = new System.Drawing.Point(307, 401);
+            this.btnTuenti.Name = "btnTuenti";
+            this.btnTuenti.Size = new System.Drawing.Size(184, 157);
+            this.btnTuenti.TabIndex = 5;
+            this.btnTuenti.Text = ";) tuenti";
+            this.btnTuenti.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtNumeroCel);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btn0);
             this.groupBox1.Controls.Add(this.btnCancelar);
@@ -295,12 +295,12 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "Número:";
             // 
-            // textBox1
+            // txtNumeroCel
             // 
-            this.textBox1.Location = new System.Drawing.Point(164, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(252, 22);
-            this.textBox1.TabIndex = 21;
+            this.txtNumeroCel.Location = new System.Drawing.Point(164, 63);
+            this.txtNumeroCel.Name = "txtNumeroCel";
+            this.txtNumeroCel.Size = new System.Drawing.Size(252, 22);
+            this.txtNumeroCel.TabIndex = 21;
             // 
             // FrmCargarCel
             // 
@@ -309,11 +309,11 @@
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1064, 755);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnTuenti);
+            this.Controls.Add(this.btnPersonal);
+            this.Controls.Add(this.btnClaro);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnMovistar);
             this.Controls.Add(this.label1);
             this.Name = "FrmCargarCel";
             this.Text = "FrmCargarCel";
@@ -327,13 +327,13 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMovistar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnClaro;
+        private System.Windows.Forms.Button btnPersonal;
+        private System.Windows.Forms.Button btnTuenti;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNumeroCel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.Button btnCancelar;
