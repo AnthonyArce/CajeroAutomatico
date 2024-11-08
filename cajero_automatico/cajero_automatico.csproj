@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmCargarCel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCargarCel.Designer.cs">
+      <DependentUpon>FrmCargarCel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCompraVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCompraVenta.Designer.cs">
+      <DependentUpon>FrmCompraVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCuentaDolares.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +96,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCargarCel.resx">
+      <DependentUpon>FrmCargarCel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompraVenta.resx">
+      <DependentUpon>FrmCompraVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCuentaDolares.resx">
       <DependentUpon>FrmCuentaDolares.cs</DependentUpon>
     </EmbeddedResource>

@@ -41,7 +41,7 @@ namespace cajero_automatico
 
                     if (dni == txtDni.Text)
                     {
-                        if (pass == txtPass.Text)
+                        if (pass == txtPin.Text)
                         {
                             isUser = true;
                         }
