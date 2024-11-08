@@ -108,5 +108,11 @@ namespace cajero_automatico
              FrmExtraer _frmExtraer = new FrmExtraer(_nroCuenta, this);
              _frmExtraer.Show();
         }
+
+        private void btnTransferirPesos_Click(object sender, EventArgs e)
+        {
+            FrmTransferir frmTransferir = new FrmTransferir(_nroCuenta, this);
+            frmTransferir.Show();
+        }
     }
 }

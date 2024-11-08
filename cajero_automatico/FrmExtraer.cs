@@ -88,7 +88,6 @@ namespace cajero_automatico
                         
            
         }
-
         private int ultimaTransaccionCargada()
         {
             FileStream FS = new FileStream("D:\\cajero\\transacciones.txt", FileMode.Open);
