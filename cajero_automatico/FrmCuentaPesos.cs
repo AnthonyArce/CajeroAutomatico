@@ -13,18 +13,22 @@ namespace cajero_automatico
 {
     public partial class FrmCuentaPesos : Form
     {
-        public FrmCuentaPesos()
+        private FrmExtraer _frmExtraer;
+        private string _nroCuenta;
+        public FrmCuentaPesos(string nroCuenta)
         {
             InitializeComponent();
+            _nroCuenta = nroCuenta;
         }
 
         private void FrmCuentaPesos_Load(object sender, EventArgs e)
         {
-
+            CompletarDatosCuenta(_nroCuenta);
+            CompletarDatosTransacciones(_nroCuenta);
         }
 
 
-        void CompletarDatosCuenta(string _nroCuenta)
+        public void CompletarDatosCuenta(string _nroCuenta)
         {
 
             FileStream FS = new FileStream("D:\\cajero\\Cuentas.txt", FileMode.Open);
@@ -45,20 +49,13 @@ namespace cajero_automatico
                 alias = vectorregistro[5];
                 cbu = vectorregistro[6];
 
+                lblNroCuenta.Text = nrocuenta;
+
+
                 if (_nroCuenta == nrocuenta)
                 {
-                    if (moneda == "PES")
-                    {
-                        lblTipoCuentaPes.Text = $"{tipoCuenta} $";
-                        lblMontoPes.Text = $"${saldo}";
-                        lblNumCuentaPes.Text = $"{nrocuenta}";
-                    }
-                    else
-                    {
-                        lblTipoCuentaDol.Text = $"{tipoCuenta} $";
-                        lblMontoDol.Text = $"${saldo}";
-                        lblNumCuentaDol.Text = $"{nrocuenta}";
-                    }
+                    lblNroCuenta.Text = nrocuenta;
+                    lblMontoPes.Text = saldo;
                 }
 
             }
@@ -68,14 +65,14 @@ namespace cajero_automatico
 
         }
 
-        void CompletarDatosTransacciones(string _nroCuenta)
+        public void CompletarDatosTransacciones(string _nroCuenta)
         {
             FileStream FS = new FileStream("D:\\cajero\\transacciones.txt", FileMode.Open);
             StreamReader SR = new StreamReader(FS);
             String[] vectorregistro;
             String registro;
             String idTransaccion, nrocuenta, fecha, destinatario, remitente, monto;
-            lstvMovimientos.Items.Clear();
+            lstvMovimientosPes.Items.Clear();
 
             while (!(SR.Peek() == -1))
             {
@@ -96,7 +93,7 @@ namespace cajero_automatico
                     ls.SubItems.Add(destinatario);
                     ls.SubItems.Add(monto);
 
-                    lstvMovimientos.Items.Add(ls);
+                    lstvMovimientosPes.Items.Add(ls);
                 }
 
             }
@@ -104,6 +101,18 @@ namespace cajero_automatico
             SR.Close();
             FS.Close();
 
+        }
+
+        private void btnExtraerPesos_Click(object sender, EventArgs e)
+        {
+             FrmExtraer _frmExtraer = new FrmExtraer(_nroCuenta, this);
+             _frmExtraer.Show();
+        }
+
+        private void btnTransferirPesos_Click(object sender, EventArgs e)
+        {
+            FrmTransferir frmTransferir = new FrmTransferir(_nroCuenta, this);
+            frmTransferir.Show();
         }
     }
 }

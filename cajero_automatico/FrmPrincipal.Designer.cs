@@ -120,7 +120,7 @@
             this.grbCuentaPesos.TabIndex = 6;
             this.grbCuentaPesos.TabStop = false;
             this.grbCuentaPesos.Text = "groupBox1";
-            this.grbCuentaPesos.Enter += new System.EventHandler(this.grpBox_Enter);
+            this.grbCuentaPesos.Click += new System.EventHandler(this.grpBox_Click);
             // 
             // groupBox2
             // 
