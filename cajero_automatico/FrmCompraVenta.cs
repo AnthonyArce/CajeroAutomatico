@@ -62,5 +62,11 @@ namespace cajero_automatico
         {
             AgregarNumero("0");
         }
+
+        private void FrmCompraVenta_Load(object sender, EventArgs e)
+        {
+                cmbOperacion.Items.Add("Compra");
+                cmbOperacion.Items.Add("Venta");
+        }
     }
 }

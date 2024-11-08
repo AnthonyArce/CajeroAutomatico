@@ -35,7 +35,7 @@
             this.lblNumCuentaDol = new System.Windows.Forms.Label();
             this.lblTipoCuentaDol = new System.Windows.Forms.Label();
             this.grbCuentaPesos = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grbCuentaDolares = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lstvMovimientos = new System.Windows.Forms.ListView();
             this.col0 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -47,7 +47,7 @@
             this.lblApellidoyNombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.grbCuentaPesos.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.grbCuentaDolares.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,24 +119,22 @@
             this.grbCuentaPesos.Size = new System.Drawing.Size(259, 124);
             this.grbCuentaPesos.TabIndex = 6;
             this.grbCuentaPesos.TabStop = false;
-            this.grbCuentaPesos.Text = "groupBox1";
             this.grbCuentaPesos.Click += new System.EventHandler(this.grpBox_Click);
             // 
-            // groupBox2
+            // grbCuentaDolares
             // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox2.Controls.Add(this.lblMontoDol);
-            this.groupBox2.Controls.Add(this.lblTipoCuentaDol);
-            this.groupBox2.Controls.Add(this.lblNumCuentaDol);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(591, 179);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(259, 124);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.grbCuentaDolares.BackColor = System.Drawing.SystemColors.Control;
+            this.grbCuentaDolares.Controls.Add(this.lblMontoDol);
+            this.grbCuentaDolares.Controls.Add(this.lblTipoCuentaDol);
+            this.grbCuentaDolares.Controls.Add(this.lblNumCuentaDol);
+            this.grbCuentaDolares.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbCuentaDolares.Location = new System.Drawing.Point(591, 179);
+            this.grbCuentaDolares.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbCuentaDolares.Name = "grbCuentaDolares";
+            this.grbCuentaDolares.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbCuentaDolares.Size = new System.Drawing.Size(259, 124);
+            this.grbCuentaDolares.TabIndex = 7;
+            this.grbCuentaDolares.TabStop = false;
             // 
             // groupBox3
             // 
@@ -162,7 +160,7 @@
             this.col3});
             this.lstvMovimientos.HideSelection = false;
             this.lstvMovimientos.Location = new System.Drawing.Point(23, 64);
-            this.lstvMovimientos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstvMovimientos.Margin = new System.Windows.Forms.Padding(4);
             this.lstvMovimientos.Name = "lstvMovimientos";
             this.lstvMovimientos.Size = new System.Drawing.Size(603, 259);
             this.lstvMovimientos.TabIndex = 1;
@@ -246,7 +244,7 @@
             this.Controls.Add(this.lblApellidoyNombre);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.grbCuentaDolares);
             this.Controls.Add(this.grbCuentaPesos);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmPrincipal";
@@ -254,8 +252,8 @@
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.grbCuentaPesos.ResumeLayout(false);
             this.grbCuentaPesos.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.grbCuentaDolares.ResumeLayout(false);
+            this.grbCuentaDolares.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -272,7 +270,7 @@
         private System.Windows.Forms.Label lblNumCuentaDol;
         private System.Windows.Forms.Label lblTipoCuentaDol;
         private System.Windows.Forms.GroupBox grbCuentaPesos;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grbCuentaDolares;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;

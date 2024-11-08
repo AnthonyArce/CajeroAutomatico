@@ -62,5 +62,49 @@ namespace cajero_automatico
         {
             AgregarNumero("0");
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (txtNumeroCel.Text.Length > 0)
+            {
+                txtNumeroCel.Text = txtNumeroCel.Text.Substring(0, txtNumeroCel.Text.Length - 1);
+            }
+        }
+
+        // Variable para almacenar la compañía seleccionada
+        private string companiaSeleccionada = "";
+
+        private void btnMovistar_Click(object sender, EventArgs e)
+        {
+            companiaSeleccionada = "Movistar";
+        }
+
+        private void btnClaro_Click(object sender, EventArgs e)
+        {
+            companiaSeleccionada = "Claro";
+        }
+
+        private void btnPersonal_Click(object sender, EventArgs e)
+        {
+            companiaSeleccionada = "Personal";
+        }
+
+        private void btnTuenti_Click(object sender, EventArgs e)
+        {
+            companiaSeleccionada = "Tuenti";
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(companiaSeleccionada))
+            {
+                MessageBox.Show("Compañía seleccionada: " + companiaSeleccionada);
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una compañía antes de continuar.");
+            }
+        }
+
     }
 }
