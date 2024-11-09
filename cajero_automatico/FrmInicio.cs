@@ -104,5 +104,65 @@ namespace cajero_automatico
                 txtPin.PasswordChar = '\0';
             }
         }
+
+        private void AgregarNumero(string numero)
+        {
+            txtPin.Text += numero;
+        }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("1");
+        }
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("2");
+        }
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("3");
+        }
+        private void btn4_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("4");
+        }
+        private void btn5_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("5");
+        }
+        private void btn6_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("6");
+        }
+        private void btn7_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("7");
+        }
+        private void btn8_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("8");
+        }
+        private void btn9_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("9");
+        }
+        private void btn0_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("0");
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (txtPin.Text.Length > 0)
+            {
+                txtPin.Text = txtPin.Text.Substring(0, txtPin.Text.Length - 1);
+            }
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            txtPin.Text = "";
+            txtDni.Text = "";
+        }
     }
 }

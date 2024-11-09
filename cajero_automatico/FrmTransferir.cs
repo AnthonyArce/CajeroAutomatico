@@ -113,7 +113,7 @@ namespace cajero_automatico
             File.Move("D:\\cajero\\CuentasAux.txt", "D:\\cajero\\Cuentas.txt");
         }
 
-        private void registrarTransacción(string destino, string remitente)
+        private void registrarTransacción(string destino, string remitente, string monto)
         {
             int idTransacción = ultimaTransaccionCargada() + 1;
 
@@ -122,7 +122,7 @@ namespace cajero_automatico
             String Reg;
 
             string fecha = DateTime.Now.ToString("dd/MM/yy");
-            Reg = $"{idTransacción};{remitente};{fecha};{destino};Transferencia;-{txtTransferirMonto.Text}";
+            Reg = $"{idTransacción};{remitente};{fecha};{destino};Transferencia;{ monto }";
             SW.WriteLine(Reg);
             SW.Close();
             FS.Close();
@@ -191,7 +191,7 @@ namespace cajero_automatico
             {
                 modificarSaldo(txtALIAS.Text, int.Parse(txtTransferirMonto.Text));
                 datosCliente = obtenerDatos(txtALIAS.Text);
-                registrarTransacción( _nroCuenta, datosCliente[0]);
+                registrarTransacción( _nroCuenta, datosCliente[0],txtTransferirMonto.Text);
                 cuentaDestino = txtALIAS.Text;
             }
             else
@@ -213,7 +213,7 @@ namespace cajero_automatico
             if (existeCuenta) 
             {
                 modificarSaldo(_nroCuenta, int.Parse($"-{txtTransferirMonto.Text}"));
-                registrarTransacción(cuentaDestino, _nroCuenta);
+                registrarTransacción(cuentaDestino, _nroCuenta, $"-{txtTransferirMonto.Text}");
             }
 
             limpiarInputs();
@@ -227,6 +227,7 @@ namespace cajero_automatico
             txtTransferirMonto.Text = "";
 
             _frmCuentaPesos.CompletarDatosCuenta(_nroCuenta);
+            _frmCuentaPesos.CompletarDatosTransacciones(_nroCuenta);
             this.Close();
         }
 

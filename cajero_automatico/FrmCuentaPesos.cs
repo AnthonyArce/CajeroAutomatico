@@ -112,5 +112,15 @@ namespace cajero_automatico
             frmTransferir.Show();
         }
 
+        private void btnDepositar_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnCargarCel_Click(object sender, EventArgs e)
+        {
+            FrmCargarCel frmCargarCel = new FrmCargarCel(_nroCuenta, this);
+            frmCargarCel.Show();
+        }
     }
 }

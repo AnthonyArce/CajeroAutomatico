@@ -22,7 +22,7 @@ namespace cajero_automatico
             _frmPesos = frmPesos;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
 
             modificarSaldo();
@@ -108,6 +108,7 @@ namespace cajero_automatico
 
             return idTransacción;
         }
+
 
     }
 }

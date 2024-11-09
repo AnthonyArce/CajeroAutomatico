@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDepositar = new System.Windows.Forms.Button();
             this.btnTransferirPesos = new System.Windows.Forms.Button();
             this.btnExtraerPesos = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -38,7 +38,7 @@
             this.col2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.col3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label7 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnCargarCel = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblMontoPes = new System.Windows.Forms.Label();
@@ -51,15 +51,16 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btnDepositar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(66, 203);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 79);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Depositar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDepositar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDepositar.Location = new System.Drawing.Point(66, 203);
+            this.btnDepositar.Name = "btnDepositar";
+            this.btnDepositar.Size = new System.Drawing.Size(166, 79);
+            this.btnDepositar.TabIndex = 4;
+            this.btnDepositar.Text = "Depositar";
+            this.btnDepositar.UseVisualStyleBackColor = true;
+            this.btnDepositar.Click += new System.EventHandler(this.btnDepositar_Click);
             // 
             // btnTransferirPesos
             // 
@@ -146,15 +147,16 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Movimientos";
             // 
-            // button4
+            // btnCargarCel
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(582, 203);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(166, 79);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "Cargar Telefono";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnCargarCel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargarCel.Location = new System.Drawing.Point(582, 203);
+            this.btnCargarCel.Name = "btnCargarCel";
+            this.btnCargarCel.Size = new System.Drawing.Size(166, 79);
+            this.btnCargarCel.TabIndex = 18;
+            this.btnCargarCel.Text = "Cargar Telefono";
+            this.btnCargarCel.UseVisualStyleBackColor = true;
+            this.btnCargarCel.Click += new System.EventHandler(this.btnCargarCel_Click);
             // 
             // label4
             // 
@@ -253,11 +255,11 @@
             this.ClientSize = new System.Drawing.Size(798, 613);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnCargarCel);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnExtraerPesos);
             this.Controls.Add(this.btnTransferirPesos);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDepositar);
             this.Name = "FrmCuentaPesos";
             this.Text = "FrmCuentaPesos";
             this.Load += new System.EventHandler(this.FrmCuentaPesos_Load);
@@ -271,12 +273,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDepositar;
         private System.Windows.Forms.Button btnTransferirPesos;
         private System.Windows.Forms.Button btnExtraerPesos;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnCargarCel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListView lstvMovimientosPes;
         private System.Windows.Forms.ColumnHeader col0;

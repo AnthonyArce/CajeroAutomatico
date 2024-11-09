@@ -70,6 +70,12 @@
     <Compile Include="FrmCuentaPesos.Designer.cs">
       <DependentUpon>FrmCuentaPesos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDeposito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDeposito.Designer.cs">
+      <DependentUpon>FrmDeposito.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmExtraer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCuentaPesos.resx">
       <DependentUpon>FrmCuentaPesos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDeposito.resx">
+      <DependentUpon>FrmDeposito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmExtraer.resx">
       <DependentUpon>FrmExtraer.cs</DependentUpon>

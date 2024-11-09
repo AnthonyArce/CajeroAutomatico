@@ -11,20 +11,20 @@ using System.Windows.Forms;
 
 namespace cajero_automatico
 {
-    public partial class FrmCargarCel : Form
+    public partial class FrmDeposito : Form
     {
         private string _nroCuenta;
-        private FrmCuentaPesos _frmCuentaPesos;
-        public FrmCargarCel(string nroCuenta, FrmCuentaPesos frmCuentaPesos)
+        private FrmCuentaPesos _frmPesos;
+        public FrmDeposito(string nroCuenta, FrmCuentaPesos frmPesos)
         {
             InitializeComponent();
             _nroCuenta = nroCuenta;
-            _frmCuentaPesos = frmCuentaPesos;
+            _frmPesos = frmPesos;
         }
 
         private void AgregarNumero(string numero)
         {
-            txtNum.Text += numero;
+            txtMonto.Text += numero;
         }
 
         private void btn1_Click(object sender, EventArgs e)
@@ -76,48 +76,24 @@ namespace cajero_automatico
             }
         }
 
-        // Variable para almacenar la compañía seleccionada
-        private string companiaSeleccionada = "";
-
-        private void btnMovistar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-            companiaSeleccionada = "Movistar";
+            txtMonto.Text = "";
         }
 
-        private void btnClaro_Click(object sender, EventArgs e)
-        {
-            companiaSeleccionada = "Claro";
-        }
-
-        private void btnPersonal_Click(object sender, EventArgs e)
-        {
-            companiaSeleccionada = "Personal";
-        }
-
-        private void btnTuenti_Click(object sender, EventArgs e)
-        {
-            companiaSeleccionada = "Tuenti";
-        }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(companiaSeleccionada))
-            {
-                if (!string.IsNullOrEmpty(txtNum.Text))
-                {
 
-                    modificarSaldo();
-                    registrarTransaccion();
-                }
-                else
-                {
-                    MessageBox.Show("Por favor, seleccione una compañía antes de continuar.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Por favor, seleccione una compañía antes de continuar.");
-            }
+            modificarSaldo();
+            registrarTransacción();
+
+            txtMonto.Text = "";
+            _frmPesos.CompletarDatosCuenta(_nroCuenta);
+            _frmPesos.CompletarDatosTransacciones(_nroCuenta);
+
+            this.Close();
+
         }
 
         private void modificarSaldo()
@@ -144,16 +120,7 @@ namespace cajero_automatico
 
                 if (nroCuenta == _nroCuenta)
                 {
-                    int montoTotal = int.Parse(saldo) - int.Parse(txtMonto.Text);
-                    if (montoTotal >= 0) 
-                    {
-                        Reg = $"{nroCuenta};{nroCliente};{moneda};{(int.Parse(saldo) - int.Parse(txtMonto.Text)).ToString()};{tipoCuenta};{alias};{cbu}";
-                    }
-                    else
-                    {
-                        MessageBox.Show("Saldo insuficiente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    
+                    Reg = $"{nroCuenta};{nroCliente};{moneda};{(int.Parse(saldo) - int.Parse(txtMonto.Text)).ToString()};{tipoCuenta};{alias};{cbu}";
                 }
 
                 SW.WriteLine(Reg);
@@ -165,8 +132,7 @@ namespace cajero_automatico
             File.Delete("D:\\cajero\\Cuentas.txt");
             File.Move("D:\\cajero\\CuentasAux.txt", "D:\\cajero\\Cuentas.txt");
         }
-
-        private void registrarTransaccion()
+        private void registrarTransacción()
         {
             int idTransacción = ultimaTransaccionCargada() + 1;
 
@@ -175,14 +141,13 @@ namespace cajero_automatico
             String Reg;
 
             string fecha = DateTime.Now.ToString("dd/MM/yy");
-            Reg = $"{idTransacción};{_nroCuenta};{fecha};Carga de credito;{companiaSeleccionada};-{txtMonto.Text}";
+            Reg = $"{idTransacción};{_nroCuenta};{fecha};sistemaBanquito;extraccion;{txtMonto.Text}";
             SW.WriteLine(Reg);
             SW.Close();
             FS.Close();
 
 
         }
-
         private int ultimaTransaccionCargada()
         {
             FileStream FS = new FileStream("D:\\cajero\\transacciones.txt", FileMode.Open);
@@ -202,12 +167,6 @@ namespace cajero_automatico
             FS.Close();
 
             return idTransacción;
-        }
-
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            txtMonto.Text = "";
         }
     }
 }
