@@ -47,6 +47,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.lblNroCuenta = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.btnAtras = new System.Windows.Forms.Button();
+            this.btnInicio = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,9 +56,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(66, 203);
+            this.button1.Location = new System.Drawing.Point(88, 250);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 79);
+            this.button1.Size = new System.Drawing.Size(221, 97);
             this.button1.TabIndex = 4;
             this.button1.Text = "Depositar";
             this.button1.UseVisualStyleBackColor = true;
@@ -64,9 +67,10 @@
             // btnTransferirPesos
             // 
             this.btnTransferirPesos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransferirPesos.Location = new System.Drawing.Point(238, 203);
+            this.btnTransferirPesos.Location = new System.Drawing.Point(317, 250);
+            this.btnTransferirPesos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTransferirPesos.Name = "btnTransferirPesos";
-            this.btnTransferirPesos.Size = new System.Drawing.Size(166, 79);
+            this.btnTransferirPesos.Size = new System.Drawing.Size(221, 97);
             this.btnTransferirPesos.TabIndex = 5;
             this.btnTransferirPesos.Text = "Transferir";
             this.btnTransferirPesos.UseVisualStyleBackColor = true;
@@ -75,9 +79,10 @@
             // btnExtraerPesos
             // 
             this.btnExtraerPesos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExtraerPesos.Location = new System.Drawing.Point(410, 203);
+            this.btnExtraerPesos.Location = new System.Drawing.Point(547, 250);
+            this.btnExtraerPesos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExtraerPesos.Name = "btnExtraerPesos";
-            this.btnExtraerPesos.Size = new System.Drawing.Size(166, 79);
+            this.btnExtraerPesos.Size = new System.Drawing.Size(221, 97);
             this.btnExtraerPesos.TabIndex = 6;
             this.btnExtraerPesos.Text = "Extraer";
             this.btnExtraerPesos.UseVisualStyleBackColor = true;
@@ -87,14 +92,13 @@
             this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox3.Controls.Add(this.lstvMovimientosPes);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(147, 310);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Location = new System.Drawing.Point(196, 382);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(497, 290);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(663, 357);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
             // 
             // lstvMovimientosPes
             // 
@@ -104,9 +108,10 @@
             this.col2,
             this.col3});
             this.lstvMovimientosPes.HideSelection = false;
-            this.lstvMovimientosPes.Location = new System.Drawing.Point(22, 47);
+            this.lstvMovimientosPes.Location = new System.Drawing.Point(29, 58);
+            this.lstvMovimientosPes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstvMovimientosPes.Name = "lstvMovimientosPes";
-            this.lstvMovimientosPes.Size = new System.Drawing.Size(453, 211);
+            this.lstvMovimientosPes.Size = new System.Drawing.Size(603, 259);
             this.lstvMovimientosPes.TabIndex = 2;
             this.lstvMovimientosPes.UseCompatibleStateImageBehavior = false;
             this.lstvMovimientosPes.View = System.Windows.Forms.View.Details;
@@ -138,19 +143,19 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(207, 22);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(276, 27);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 17);
+            this.label7.Size = new System.Drawing.Size(114, 20);
             this.label7.TabIndex = 0;
             this.label7.Text = "Movimientos";
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(582, 203);
+            this.button4.Location = new System.Drawing.Point(776, 250);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(166, 79);
+            this.button4.Size = new System.Drawing.Size(221, 97);
             this.button4.TabIndex = 18;
             this.button4.Text = "Cargar Telefono";
             this.button4.UseVisualStyleBackColor = true;
@@ -159,10 +164,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(62, 20);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(83, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(300, 20);
+            this.label4.Size = new System.Drawing.Size(373, 25);
             this.label4.TabIndex = 19;
             this.label4.Text = "Consulta de Cuenta Corriente en PESOS";
             // 
@@ -175,22 +179,22 @@
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.lblNroCuenta);
             this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Location = new System.Drawing.Point(31, 63);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(41, 78);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(746, 124);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(995, 153);
             this.groupBox1.TabIndex = 42;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // lblMontoPes
             // 
             this.lblMontoPes.AutoSize = true;
             this.lblMontoPes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMontoPes.Location = new System.Drawing.Point(180, 82);
+            this.lblMontoPes.Location = new System.Drawing.Point(240, 101);
+            this.lblMontoPes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMontoPes.Name = "lblMontoPes";
-            this.lblMontoPes.Size = new System.Drawing.Size(126, 20);
+            this.lblMontoPes.Size = new System.Drawing.Size(155, 25);
             this.lblMontoPes.TabIndex = 36;
             this.lblMontoPes.Text = "1231231231231";
             // 
@@ -198,9 +202,10 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(180, 54);
+            this.label11.Location = new System.Drawing.Point(240, 66);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(126, 20);
+            this.label11.Size = new System.Drawing.Size(155, 25);
             this.label11.TabIndex = 35;
             this.label11.Text = "1231231231231";
             // 
@@ -208,9 +213,10 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(46, 82);
+            this.label12.Location = new System.Drawing.Point(61, 101);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(101, 20);
+            this.label12.Size = new System.Drawing.Size(126, 25);
             this.label12.TabIndex = 34;
             this.label12.Text = "Saldo actual:";
             // 
@@ -218,9 +224,10 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(46, 54);
+            this.label13.Location = new System.Drawing.Point(61, 66);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(47, 20);
+            this.label13.Size = new System.Drawing.Size(60, 25);
             this.label13.TabIndex = 33;
             this.label13.Text = "CBU:";
             // 
@@ -228,9 +235,10 @@
             // 
             this.lblNroCuenta.AutoSize = true;
             this.lblNroCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNroCuenta.Location = new System.Drawing.Point(180, 25);
+            this.lblNroCuenta.Location = new System.Drawing.Point(240, 31);
+            this.lblNroCuenta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNroCuenta.Name = "lblNroCuenta";
-            this.lblNroCuenta.Size = new System.Drawing.Size(126, 20);
+            this.lblNroCuenta.Size = new System.Drawing.Size(155, 25);
             this.lblNroCuenta.TabIndex = 32;
             this.lblNroCuenta.Text = "1231231231231";
             // 
@@ -238,18 +246,41 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(46, 25);
+            this.label15.Location = new System.Drawing.Point(61, 31);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(147, 20);
+            this.label15.Size = new System.Drawing.Size(183, 25);
             this.label15.TabIndex = 31;
             this.label15.Text = "Numero de Cuenta:";
             // 
+            // btnAtras
+            // 
+            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.Location = new System.Drawing.Point(35, 640);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(117, 58);
+            this.btnAtras.TabIndex = 43;
+            this.btnAtras.Text = "Atrás";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            // 
+            // btnInicio
+            // 
+            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.Location = new System.Drawing.Point(35, 566);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(117, 58);
+            this.btnInicio.TabIndex = 44;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.UseVisualStyleBackColor = true;
+            // 
             // FrmCuentaPesos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(798, 613);
+            this.ClientSize = new System.Drawing.Size(1064, 754);
+            this.Controls.Add(this.btnInicio);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button4);
@@ -257,6 +288,7 @@
             this.Controls.Add(this.btnExtraerPesos);
             this.Controls.Add(this.btnTransferirPesos);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmCuentaPesos";
             this.Text = "FrmCuentaPesos";
             this.Load += new System.EventHandler(this.FrmCuentaPesos_Load);
@@ -289,5 +321,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lblNroCuenta;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Button btnInicio;
     }
 }

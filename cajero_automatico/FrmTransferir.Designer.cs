@@ -44,6 +44,8 @@
             this.txtTransferirMonto = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnInicio = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -226,12 +228,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // btnInicio
+            // 
+            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.Location = new System.Drawing.Point(52, 568);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(117, 58);
+            this.btnInicio.TabIndex = 46;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.UseVisualStyleBackColor = true;
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.Location = new System.Drawing.Point(52, 642);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(117, 58);
+            this.btnAtras.TabIndex = 45;
+            this.btnAtras.Text = "Atrás";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            // 
             // FrmTransferir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1064, 754);
+            this.Controls.Add(this.btnInicio);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -269,5 +293,7 @@
         private System.Windows.Forms.TextBox txtTransferirMonto;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnInicio;
+        private System.Windows.Forms.Button btnAtras;
     }
 }

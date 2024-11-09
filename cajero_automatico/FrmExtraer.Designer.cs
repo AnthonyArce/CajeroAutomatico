@@ -40,6 +40,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.btnInicio = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,7 +113,6 @@
             this.groupBox1.Size = new System.Drawing.Size(995, 153);
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // label10
             // 
@@ -179,12 +180,34 @@
             this.label15.TabIndex = 31;
             this.label15.Text = "Numero de Cuenta:";
             // 
+            // btnInicio
+            // 
+            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.Location = new System.Drawing.Point(55, 550);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(117, 58);
+            this.btnInicio.TabIndex = 46;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.UseVisualStyleBackColor = true;
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.Location = new System.Drawing.Point(55, 624);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(117, 58);
+            this.btnAtras.TabIndex = 45;
+            this.btnAtras.Text = "Atrás";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            // 
             // FrmExtraer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1061, 754);
+            this.Controls.Add(this.btnInicio);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
@@ -215,5 +238,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btnInicio;
+        private System.Windows.Forms.Button btnAtras;
     }
 }

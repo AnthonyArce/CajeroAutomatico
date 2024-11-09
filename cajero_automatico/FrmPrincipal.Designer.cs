@@ -63,7 +63,7 @@
             // lblNumCuentaPes
             // 
             this.lblNumCuentaPes.AutoSize = true;
-            this.lblNumCuentaPes.Location = new System.Drawing.Point(91, 34);
+            this.lblNumCuentaPes.Location = new System.Drawing.Point(112, 34);
             this.lblNumCuentaPes.Name = "lblNumCuentaPes";
             this.lblNumCuentaPes.Size = new System.Drawing.Size(133, 20);
             this.lblNumCuentaPes.TabIndex = 1;
@@ -90,7 +90,7 @@
             // lblNumCuentaDol
             // 
             this.lblNumCuentaDol.AutoSize = true;
-            this.lblNumCuentaDol.Location = new System.Drawing.Point(91, 31);
+            this.lblNumCuentaDol.Location = new System.Drawing.Point(136, 31);
             this.lblNumCuentaDol.Name = "lblNumCuentaDol";
             this.lblNumCuentaDol.Size = new System.Drawing.Size(145, 20);
             this.lblNumCuentaDol.TabIndex = 4;
@@ -116,7 +116,7 @@
             this.grbCuentaPesos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbCuentaPesos.Name = "grbCuentaPesos";
             this.grbCuentaPesos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbCuentaPesos.Size = new System.Drawing.Size(259, 124);
+            this.grbCuentaPesos.Size = new System.Drawing.Size(364, 124);
             this.grbCuentaPesos.TabIndex = 6;
             this.grbCuentaPesos.TabStop = false;
             this.grbCuentaPesos.Click += new System.EventHandler(this.grpBox_Click);
@@ -128,11 +128,11 @@
             this.grbCuentaDolares.Controls.Add(this.lblTipoCuentaDol);
             this.grbCuentaDolares.Controls.Add(this.lblNumCuentaDol);
             this.grbCuentaDolares.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbCuentaDolares.Location = new System.Drawing.Point(591, 179);
+            this.grbCuentaDolares.Location = new System.Drawing.Point(587, 179);
             this.grbCuentaDolares.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbCuentaDolares.Name = "grbCuentaDolares";
             this.grbCuentaDolares.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbCuentaDolares.Size = new System.Drawing.Size(259, 124);
+            this.grbCuentaDolares.Size = new System.Drawing.Size(364, 124);
             this.grbCuentaDolares.TabIndex = 7;
             this.grbCuentaDolares.TabStop = false;
             // 
@@ -142,14 +142,13 @@
             this.groupBox3.Controls.Add(this.lstvMovimientos);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(201, 330);
+            this.groupBox3.Location = new System.Drawing.Point(203, 330);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(649, 346);
+            this.groupBox3.Size = new System.Drawing.Size(748, 372);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
             // 
             // lstvMovimientos
             // 
@@ -159,7 +158,7 @@
             this.col2,
             this.col3});
             this.lstvMovimientos.HideSelection = false;
-            this.lstvMovimientos.Location = new System.Drawing.Point(23, 64);
+            this.lstvMovimientos.Location = new System.Drawing.Point(79, 62);
             this.lstvMovimientos.Margin = new System.Windows.Forms.Padding(4);
             this.lstvMovimientos.Name = "lstvMovimientos";
             this.lstvMovimientos.Size = new System.Drawing.Size(603, 259);

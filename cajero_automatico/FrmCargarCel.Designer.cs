@@ -50,6 +50,8 @@
             this.btn3 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
+            this.btnInicio = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +59,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(395, 60);
+            this.label1.Location = new System.Drawing.Point(395, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(244, 32);
             this.label1.TabIndex = 0;
@@ -67,7 +69,7 @@
             // 
             this.btnMovistar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMovistar.ForeColor = System.Drawing.Color.MediumSpringGreen;
-            this.btnMovistar.Location = new System.Drawing.Point(83, 202);
+            this.btnMovistar.Location = new System.Drawing.Point(85, 186);
             this.btnMovistar.Name = "btnMovistar";
             this.btnMovistar.Size = new System.Drawing.Size(184, 157);
             this.btnMovistar.TabIndex = 1;
@@ -78,7 +80,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(78, 144);
+            this.label2.Location = new System.Drawing.Point(80, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(164, 25);
             this.label2.TabIndex = 2;
@@ -88,7 +90,7 @@
             // 
             this.btnClaro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClaro.ForeColor = System.Drawing.Color.Crimson;
-            this.btnClaro.Location = new System.Drawing.Point(307, 202);
+            this.btnClaro.Location = new System.Drawing.Point(309, 186);
             this.btnClaro.Name = "btnClaro";
             this.btnClaro.Size = new System.Drawing.Size(184, 157);
             this.btnClaro.TabIndex = 3;
@@ -99,7 +101,7 @@
             // 
             this.btnPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersonal.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnPersonal.Location = new System.Drawing.Point(83, 401);
+            this.btnPersonal.Location = new System.Drawing.Point(85, 385);
             this.btnPersonal.Name = "btnPersonal";
             this.btnPersonal.Size = new System.Drawing.Size(184, 157);
             this.btnPersonal.TabIndex = 4;
@@ -110,7 +112,7 @@
             // 
             this.btnTuenti.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTuenti.ForeColor = System.Drawing.Color.HotPink;
-            this.btnTuenti.Location = new System.Drawing.Point(307, 401);
+            this.btnTuenti.Location = new System.Drawing.Point(309, 385);
             this.btnTuenti.Name = "btnTuenti";
             this.btnTuenti.Size = new System.Drawing.Size(184, 157);
             this.btnTuenti.TabIndex = 5;
@@ -135,7 +137,7 @@
             this.groupBox1.Controls.Add(this.btn3);
             this.groupBox1.Controls.Add(this.btn2);
             this.groupBox1.Controls.Add(this.btn1);
-            this.groupBox1.Location = new System.Drawing.Point(533, 160);
+            this.groupBox1.Location = new System.Drawing.Point(535, 144);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(496, 455);
             this.groupBox1.TabIndex = 21;
@@ -293,12 +295,34 @@
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
             // 
+            // btnInicio
+            // 
+            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.Location = new System.Drawing.Point(48, 585);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(117, 58);
+            this.btnInicio.TabIndex = 46;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.UseVisualStyleBackColor = true;
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.Location = new System.Drawing.Point(48, 659);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(117, 58);
+            this.btnAtras.TabIndex = 45;
+            this.btnAtras.Text = "Atrás";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            // 
             // FrmCargarCel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1064, 755);
+            this.Controls.Add(this.btnInicio);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnTuenti);
             this.Controls.Add(this.btnPersonal);
@@ -339,5 +363,7 @@
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btn1;
+        private System.Windows.Forms.Button btnInicio;
+        private System.Windows.Forms.Button btnAtras;
     }
 }
