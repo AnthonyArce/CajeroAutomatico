@@ -16,9 +16,46 @@ namespace cajero_automatico
         public FrmInicio()
         {
             InitializeComponent();
+            txtPin.PasswordChar = '*';
+            txtPin.MaxLength = 4;
+
+            btnVerPin.MouseDown += BtnVerPin_MouseDown;
+            btnVerPin.MouseUp += BtnVerPin_MouseUp;
+
+            btnCancelar.Click += BtnCancelar_Click;
+        }
+        private void txtPin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
+        private void BtnVerPin_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtPin.PasswordChar = '\0';
+        }
 
+        private void BtnVerPin_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtPin.PasswordChar = '*';  
+        }
+
+        // Evento KeyPress para permitir solo números
+        private void txtNumeroCel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            txtDni.Clear();  
+            txtPin.Clear(); 
+        }
 
         bool validarUser()
         {

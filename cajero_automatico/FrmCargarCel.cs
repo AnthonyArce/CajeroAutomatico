@@ -16,5 +16,95 @@ namespace cajero_automatico
         {
             InitializeComponent();
         }
+
+        private void AgregarNumero(string numero)
+        {
+            txtNumeroCel.Text += numero;
+        }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("1");
+        }
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("2");
+        }
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("3");
+        }
+        private void btn4_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("4");
+        }
+        private void btn5_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("5");
+        }
+        private void btn6_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("6");
+        }
+        private void btn7_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("7");
+        }
+        private void btn8_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("8");
+        }
+        private void btn9_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("9");
+        }
+        private void btn0_Click(object sender, EventArgs e)
+        {
+            AgregarNumero("0");
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (txtNumeroCel.Text.Length > 0)
+            {
+                txtNumeroCel.Text = txtNumeroCel.Text.Substring(0, txtNumeroCel.Text.Length - 1);
+            }
+        }
+
+        // Variable para almacenar la compañía seleccionada
+        private string companiaSeleccionada = "";
+
+        private void btnMovistar_Click(object sender, EventArgs e)
+        {
+            companiaSeleccionada = "Movistar";
+        }
+
+        private void btnClaro_Click(object sender, EventArgs e)
+        {
+            companiaSeleccionada = "Claro";
+        }
+
+        private void btnPersonal_Click(object sender, EventArgs e)
+        {
+            companiaSeleccionada = "Personal";
+        }
+
+        private void btnTuenti_Click(object sender, EventArgs e)
+        {
+            companiaSeleccionada = "Tuenti";
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(companiaSeleccionada))
+            {
+                MessageBox.Show("Compañía seleccionada: " + companiaSeleccionada);
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una compañía antes de continuar.");
+            }
+        }
+
     }
 }

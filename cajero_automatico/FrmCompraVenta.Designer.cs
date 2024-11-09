@@ -30,13 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblVentaDolar = new System.Windows.Forms.Label();
+            this.lblCompraDolar = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmbOperacion = new System.Windows.Forms.ComboBox();
+            this.grbPad = new System.Windows.Forms.GroupBox();
             this.btn0 = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btn9 = new System.Windows.Forms.Button();
@@ -46,15 +46,14 @@
             this.btn6 = new System.Windows.Forms.Button();
             this.btn5 = new System.Windows.Forms.Button();
             this.btn4 = new System.Windows.Forms.Button();
-            this.btnEnter = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
-            this.btnIngresar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMonto = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.grbPad.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -70,8 +69,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.lblVentaDolar);
+            this.groupBox1.Controls.Add(this.lblCompraDolar);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(186, 63);
@@ -81,15 +80,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // label2
+            // lblVentaDolar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(112, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Precio de Compra:";
+            this.lblVentaDolar.AutoSize = true;
+            this.lblVentaDolar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVentaDolar.Location = new System.Drawing.Point(443, 53);
+            this.lblVentaDolar.Name = "lblVentaDolar";
+            this.lblVentaDolar.Size = new System.Drawing.Size(142, 25);
+            this.lblVentaDolar.TabIndex = 3;
+            this.lblVentaDolar.Text = "lblVentaDolar";
+            // 
+            // lblCompraDolar
+            // 
+            this.lblCompraDolar.AutoSize = true;
+            this.lblCompraDolar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompraDolar.Location = new System.Drawing.Point(121, 53);
+            this.lblCompraDolar.Name = "lblCompraDolar";
+            this.lblCompraDolar.Size = new System.Drawing.Size(161, 25);
+            this.lblCompraDolar.TabIndex = 2;
+            this.lblCompraDolar.Text = "lblCompraDolar";
             // 
             // label3
             // 
@@ -101,70 +110,58 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Precio de Venta:";
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(144, 68);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 25);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "$903095";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(458, 68);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 25);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "$09490439";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(112, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(192, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Precio de Compra:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(371, 202);
+            this.label6.Location = new System.Drawing.Point(367, 217);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(128, 25);
             this.label6.TabIndex = 2;
             this.label6.Text = "Usted desea:";
             // 
-            // comboBox1
+            // cmbOperacion
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbOperacion.FormattingEnabled = true;
+            this.cmbOperacion.Items.AddRange(new object[] {
             "COMPRAR",
             "VENDER"});
-            this.comboBox1.Location = new System.Drawing.Point(505, 203);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 24);
-            this.comboBox1.TabIndex = 3;
+            this.cmbOperacion.Location = new System.Drawing.Point(501, 218);
+            this.cmbOperacion.Name = "cmbOperacion";
+            this.cmbOperacion.Size = new System.Drawing.Size(153, 24);
+            this.cmbOperacion.TabIndex = 3;
             // 
-            // groupBox2
+            // grbPad
             // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox2.Controls.Add(this.btn0);
-            this.groupBox2.Controls.Add(this.btnCancelar);
-            this.groupBox2.Controls.Add(this.btn9);
-            this.groupBox2.Controls.Add(this.btn8);
-            this.groupBox2.Controls.Add(this.btn7);
-            this.groupBox2.Controls.Add(this.btnEliminar);
-            this.groupBox2.Controls.Add(this.btn6);
-            this.groupBox2.Controls.Add(this.btnIngresar);
-            this.groupBox2.Controls.Add(this.btn5);
-            this.groupBox2.Controls.Add(this.btn4);
-            this.groupBox2.Controls.Add(this.btnEnter);
-            this.groupBox2.Controls.Add(this.btn3);
-            this.groupBox2.Controls.Add(this.btn2);
-            this.groupBox2.Controls.Add(this.btn1);
-            this.groupBox2.Location = new System.Drawing.Point(275, 298);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(496, 445);
-            this.groupBox2.TabIndex = 21;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.grbPad.BackColor = System.Drawing.SystemColors.Control;
+            this.grbPad.Controls.Add(this.btn0);
+            this.grbPad.Controls.Add(this.btnCancelar);
+            this.grbPad.Controls.Add(this.btn9);
+            this.grbPad.Controls.Add(this.btn8);
+            this.grbPad.Controls.Add(this.btn7);
+            this.grbPad.Controls.Add(this.btnEliminar);
+            this.grbPad.Controls.Add(this.btn6);
+            this.grbPad.Controls.Add(this.btn5);
+            this.grbPad.Controls.Add(this.btn4);
+            this.grbPad.Controls.Add(this.btnAceptar);
+            this.grbPad.Controls.Add(this.btn3);
+            this.grbPad.Controls.Add(this.btn2);
+            this.grbPad.Controls.Add(this.btn1);
+            this.grbPad.Location = new System.Drawing.Point(275, 320);
+            this.grbPad.Name = "grbPad";
+            this.grbPad.Size = new System.Drawing.Size(496, 380);
+            this.grbPad.TabIndex = 21;
+            this.grbPad.TabStop = false;
             // 
             // btn0
             // 
@@ -178,13 +175,14 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(340, 193);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(108, 56);
             this.btnCancelar.TabIndex = 18;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // btn9
             // 
@@ -218,13 +216,14 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.Color.MistyRose;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(340, 119);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(108, 56);
             this.btnEliminar.TabIndex = 14;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // btn6
             // 
@@ -256,15 +255,16 @@
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = true;
             // 
-            // btnEnter
+            // btnAceptar
             // 
-            this.btnEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnter.Location = new System.Drawing.Point(340, 48);
-            this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(108, 56);
-            this.btnEnter.TabIndex = 10;
-            this.btnEnter.Text = "Aceptar";
-            this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnAceptar.BackColor = System.Drawing.Color.Honeydew;
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Location = new System.Drawing.Point(340, 48);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(108, 56);
+            this.btnAceptar.TabIndex = 10;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = false;
             // 
             // btn3
             // 
@@ -296,33 +296,23 @@
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
             // 
-            // btnIngresar
-            // 
-            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(149, 363);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(209, 42);
-            this.btnIngresar.TabIndex = 5;
-            this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = true;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(407, 240);
+            this.label7.Location = new System.Drawing.Point(403, 255);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 29);
             this.label7.TabIndex = 22;
             this.label7.Text = "Monto:";
             // 
-            // textBox1
+            // txtMonto
             // 
-            this.textBox1.Location = new System.Drawing.Point(505, 247);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 22);
-            this.textBox1.TabIndex = 23;
+            this.txtMonto.Location = new System.Drawing.Point(501, 255);
+            this.txtMonto.Multiline = true;
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.Size = new System.Drawing.Size(153, 36);
+            this.txtMonto.TabIndex = 23;
             // 
             // FrmCompraVenta
             // 
@@ -330,18 +320,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1064, 755);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMonto);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.grbPad);
+            this.Controls.Add(this.cmbOperacion);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "FrmCompraVenta";
             this.Text = "FrmCompraVenta";
+            this.Load += new System.EventHandler(this.FrmCompraVenta_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
+            this.grbPad.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,13 +342,13 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblCompraDolar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblVentaDolar;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox cmbOperacion;
+        private System.Windows.Forms.GroupBox grbPad;
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btn9;
@@ -367,12 +358,11 @@
         private System.Windows.Forms.Button btn6;
         private System.Windows.Forms.Button btn5;
         private System.Windows.Forms.Button btn4;
-        private System.Windows.Forms.Button btnEnter;
+        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMonto;
     }
 }
