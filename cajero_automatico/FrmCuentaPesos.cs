@@ -15,6 +15,7 @@ namespace cajero_automatico
     {
         private FrmExtraer _frmExtraer;
         private string _nroCuenta;
+        private int _moneda;
         public FrmCuentaPesos(string nroCuenta)
         {
             InitializeComponent();
@@ -23,15 +24,15 @@ namespace cajero_automatico
 
         private void FrmCuentaPesos_Load(object sender, EventArgs e)
         {
-            CompletarDatosCuenta(_nroCuenta);
-            CompletarDatosTransacciones(_nroCuenta);
+            CompletarDatosCuenta(_nroCuenta, _moneda);
+            CompletarDatosTransacciones(_nroCuenta, _moneda);
         }
 
 
-        public void CompletarDatosCuenta(string _nroCuenta)
+        public void CompletarDatosCuenta(string _nroCuenta, int _moneda)
         {
 
-            FileStream FS = new FileStream("D:\\cajero\\Cuentas.txt", FileMode.Open);
+            FileStream FS = new FileStream("C:\\cajero\\Cuentas.txt", FileMode.Open);
             StreamReader SR = new StreamReader(FS);
             String[] vectorregistro;
             String registro;
@@ -62,9 +63,9 @@ namespace cajero_automatico
 
         }
 
-        public void CompletarDatosTransacciones(string _nroCuenta)
+        public void CompletarDatosTransacciones(string _nroCuenta, int _moneda)
         {
-            FileStream FS = new FileStream("D:\\cajero\\transacciones.txt", FileMode.Open);
+            FileStream FS = new FileStream("C:\\cajero\\transacciones.txt", FileMode.Open);
             StreamReader SR = new StreamReader(FS);
             String[] vectorregistro;
             String registro;
@@ -100,13 +101,13 @@ namespace cajero_automatico
 
         }
 
-        private void btnExtraerPesos_Click(object sender, EventArgs e)
+        private void btnExtraer_Click(object sender, EventArgs e)
         {
              FrmExtraer _frmExtraer = new FrmExtraer(_nroCuenta, this);
              _frmExtraer.Show();
         }
 
-        private void btnTransferirPesos_Click(object sender, EventArgs e)
+        private void btnTransferir_Click(object sender, EventArgs e)
         {
             FrmTransferir frmTransferir = new FrmTransferir(_nroCuenta, this);
             frmTransferir.Show();

@@ -15,11 +15,21 @@ namespace cajero_automatico
     {
         private string _nroCuenta;
         private FrmCuentaPesos _frmCuentaPesos;
+        private string nroCuenta;
+        private int _moneda;
+        private FrmCuentaDolares frmCuentaDolares;
+
         public FrmTransferir(string nroCuenta, FrmCuentaPesos frmCuentaPesos)
         {
             InitializeComponent();
             _nroCuenta = nroCuenta;
             _frmCuentaPesos = frmCuentaPesos;
+        }
+
+        public FrmTransferir(string nroCuenta, FrmCuentaDolares frmCuentaDolares)
+        {
+            this.nroCuenta = nroCuenta;
+            this.frmCuentaDolares = frmCuentaDolares;
         }
 
         private void FrmTransferir_Load(object sender, EventArgs e)
@@ -31,7 +41,7 @@ namespace cajero_automatico
         public void CompletarDatosCuenta(string _nroCuenta)
         {
 
-            FileStream FS = new FileStream("D:\\cajero\\Cuentas.txt", FileMode.Open);
+            FileStream FS = new FileStream("C:\\cajero\\Cuentas.txt", FileMode.Open);
             StreamReader SR = new StreamReader(FS);
             String[] vectorregistro;
             String registro;
@@ -69,8 +79,8 @@ namespace cajero_automatico
 
         private void modificarSaldo(string cuenta, int monto)
         {
-            FileStream FS = new FileStream("D:\\cajero\\Cuentas.txt", FileMode.Open);
-            FileStream FSAUX = new FileStream("D:\\cajero\\CuentasAux.txt", FileMode.Create);
+            FileStream FS = new FileStream("C:\\cajero\\Cuentas.txt", FileMode.Open);
+            FileStream FSAUX = new FileStream("C:\\cajero\\CuentasAux.txt", FileMode.Create);
             StreamReader SR = new StreamReader(FS);
             StreamWriter SW = new StreamWriter(FSAUX);
             String[] vectorregistro;
@@ -109,15 +119,15 @@ namespace cajero_automatico
             SW.Close();
             FS.Close();
             FSAUX.Close();
-            File.Delete("D:\\cajero\\Cuentas.txt");
-            File.Move("D:\\cajero\\CuentasAux.txt", "D:\\cajero\\Cuentas.txt");
+            File.Delete("C:\\cajero\\Cuentas.txt");
+            File.Move("C:\\cajero\\CuentasAux.txt", "C:\\cajero\\Cuentas.txt");
         }
 
         private void registrarTransacción(string destino, string remitente)
         {
             int idTransacción = ultimaTransaccionCargada() + 1;
 
-            FileStream FS = new FileStream("D:\\cajero\\transacciones.txt", FileMode.Append);
+            FileStream FS = new FileStream("C:\\cajero\\transacciones.txt", FileMode.Append);
             StreamWriter SW = new StreamWriter(FS);
             String Reg;
 
@@ -132,7 +142,7 @@ namespace cajero_automatico
 
         private int ultimaTransaccionCargada()
         {
-            FileStream FS = new FileStream("D:\\cajero\\transacciones.txt", FileMode.Open);
+            FileStream FS = new FileStream("C:\\cajero\\transacciones.txt", FileMode.Open);
             StreamReader SR = new StreamReader(FS);
             String[] vectorregistro;
             String registro;
@@ -153,7 +163,7 @@ namespace cajero_automatico
 
         private bool verificarCuentaExterna(string cuentaExterna)
         {
-            FileStream FS = new FileStream("D:\\cajero\\Cuentas.txt", FileMode.Open);
+            FileStream FS = new FileStream("C:\\cajero\\Cuentas.txt", FileMode.Open);
             StreamReader SR = new StreamReader(FS);
 
             String[] vectorregistro;
@@ -226,13 +236,13 @@ namespace cajero_automatico
             txtCBU.Text = "";
             txtTransferirMonto.Text = "";
 
-            _frmCuentaPesos.CompletarDatosCuenta(_nroCuenta);
+            _frmCuentaPesos.CompletarDatosCuenta(_nroCuenta, _moneda);
             this.Close();
         }
 
         private List<string> obtenerDatos(string cuenta)
         {
-            FileStream FS = new FileStream("D:\\cajero\\Cuentas.txt", FileMode.Open);
+            FileStream FS = new FileStream("C:\\cajero\\Cuentas.txt", FileMode.Open);
             StreamReader SR = new StreamReader(FS);
 
             String[] vectorregistro;

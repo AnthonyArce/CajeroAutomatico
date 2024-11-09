@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label4 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lstvMovimientos = new System.Windows.Forms.ListView();
             this.col0 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,9 +36,9 @@
             this.col2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.col3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label7 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExtraerDolares = new System.Windows.Forms.Button();
+            this.btnTransferirDolares = new System.Windows.Forms.Button();
+            this.btnDepositarDolares = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -63,17 +62,6 @@
             this.label4.TabIndex = 31;
             this.label4.Text = "Consulta de Caja de Ahorros en Dólares";
             // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(779, 247);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(221, 97);
-            this.button4.TabIndex = 30;
-            this.button4.Text = "Cargar Telefono";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
@@ -86,7 +74,6 @@
             this.groupBox3.Size = new System.Drawing.Size(663, 357);
             this.groupBox3.TabIndex = 29;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
             // 
             // lstvMovimientos
             // 
@@ -137,38 +124,38 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Movimientos";
             // 
-            // button3
+            // btnExtraerDolares
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(550, 247);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(221, 97);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Extraer";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnExtraerDolares.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExtraerDolares.Location = new System.Drawing.Point(648, 254);
+            this.btnExtraerDolares.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExtraerDolares.Name = "btnExtraerDolares";
+            this.btnExtraerDolares.Size = new System.Drawing.Size(221, 97);
+            this.btnExtraerDolares.TabIndex = 28;
+            this.btnExtraerDolares.Text = "Extraer";
+            this.btnExtraerDolares.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnTransferirDolares
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(321, 247);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(221, 97);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Transferir";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnTransferirDolares.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransferirDolares.Location = new System.Drawing.Point(419, 254);
+            this.btnTransferirDolares.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTransferirDolares.Name = "btnTransferirDolares";
+            this.btnTransferirDolares.Size = new System.Drawing.Size(221, 97);
+            this.btnTransferirDolares.TabIndex = 27;
+            this.btnTransferirDolares.Text = "Transferir";
+            this.btnTransferirDolares.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnDepositarDolares
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(91, 247);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(221, 97);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Depositar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDepositarDolares.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDepositarDolares.Location = new System.Drawing.Point(189, 254);
+            this.btnDepositarDolares.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDepositarDolares.Name = "btnDepositarDolares";
+            this.btnDepositarDolares.Size = new System.Drawing.Size(221, 97);
+            this.btnDepositarDolares.TabIndex = 26;
+            this.btnDepositarDolares.Text = "Depositar";
+            this.btnDepositarDolares.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -281,11 +268,10 @@
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnExtraerDolares);
+            this.Controls.Add(this.btnTransferirDolares);
+            this.Controls.Add(this.btnDepositarDolares);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmCuentaDolares";
             this.Text = "CuentaDolares";
@@ -300,7 +286,6 @@
 
         #endregion
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ListView lstvMovimientos;
         private System.Windows.Forms.ColumnHeader col0;
@@ -308,9 +293,9 @@
         private System.Windows.Forms.ColumnHeader col2;
         private System.Windows.Forms.ColumnHeader col3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExtraerDolares;
+        private System.Windows.Forms.Button btnTransferirDolares;
+        private System.Windows.Forms.Button btnDepositarDolares;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;

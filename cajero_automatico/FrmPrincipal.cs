@@ -26,7 +26,7 @@ namespace cajero_automatico
         void CompletarDatosPersona()
         {
 
-            FileStream FS = new FileStream("D:\\cajero\\Cliente.txt", FileMode.Open);
+            FileStream FS = new FileStream("C:\\cajero\\Cliente.txt", FileMode.Open);
             StreamReader SR = new StreamReader(FS);
             String[] vectorregistro;
             String registro;
@@ -59,7 +59,7 @@ namespace cajero_automatico
         void CompletarDatosCuenta(string _nroCliente)
         {
 
-            FileStream FS = new FileStream("D:\\cajero\\Cuentas.txt", FileMode.Open);
+            FileStream FS = new FileStream("C:\\cajero\\Cuentas.txt", FileMode.Open);
             StreamReader SR = new StreamReader(FS);
             String[] vectorregistro;
             String registro;
@@ -102,7 +102,7 @@ namespace cajero_automatico
 
         void CompletarDatosTransacciones(string _nroCuenta) 
         {
-            FileStream FS = new FileStream("D:\\cajero\\transacciones.txt", FileMode.Open);
+            FileStream FS = new FileStream("C:\\cajero\\transacciones.txt", FileMode.Open);
             StreamReader SR = new StreamReader(FS);
             String[] vectorregistro;
             String registro;
@@ -153,12 +153,21 @@ namespace cajero_automatico
 
         }
 
-        private void grpBox_Click(object sender, EventArgs e)
+        private void grpBoxPesos_Click(object sender, EventArgs e)
         {
             FrmCuentaPesos frmCuentaPesos = new FrmCuentaPesos(lblNumCuentaPes.Text);
             frmCuentaPesos.Show();
 
             this.Hide();
+        }
+
+        private void grbCuentaDolares_Click(object sender, EventArgs e)
+        {
+            FrmCuentaDolares frmCuentaPesos = new FrmCuentaDolares(lblNumCuentaPes.Text);
+            frmCuentaPesos.Show();
+
+            this.Hide();
+
         }
     }
 }

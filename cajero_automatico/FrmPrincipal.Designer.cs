@@ -35,7 +35,9 @@
             this.lblNumCuentaDol = new System.Windows.Forms.Label();
             this.lblTipoCuentaDol = new System.Windows.Forms.Label();
             this.grbCuentaPesos = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.grbCuentaDolares = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lstvMovimientos = new System.Windows.Forms.ListView();
             this.col0 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -56,9 +58,9 @@
             this.lblTipoCuentaPes.AutoSize = true;
             this.lblTipoCuentaPes.Location = new System.Drawing.Point(27, 34);
             this.lblTipoCuentaPes.Name = "lblTipoCuentaPes";
-            this.lblTipoCuentaPes.Size = new System.Drawing.Size(46, 20);
+            this.lblTipoCuentaPes.Size = new System.Drawing.Size(51, 20);
             this.lblTipoCuentaPes.TabIndex = 0;
-            this.lblTipoCuentaPes.Text = "CA $";
+            this.lblTipoCuentaPes.Text = "CA $:";
             // 
             // lblNumCuentaPes
             // 
@@ -72,7 +74,7 @@
             // lblMontoPes
             // 
             this.lblMontoPes.AutoSize = true;
-            this.lblMontoPes.Location = new System.Drawing.Point(29, 80);
+            this.lblMontoPes.Location = new System.Drawing.Point(112, 76);
             this.lblMontoPes.Name = "lblMontoPes";
             this.lblMontoPes.Size = new System.Drawing.Size(85, 20);
             this.lblMontoPes.TabIndex = 2;
@@ -81,7 +83,7 @@
             // lblMontoDol
             // 
             this.lblMontoDol.AutoSize = true;
-            this.lblMontoDol.Location = new System.Drawing.Point(29, 76);
+            this.lblMontoDol.Location = new System.Drawing.Point(136, 76);
             this.lblMontoDol.Name = "lblMontoDol";
             this.lblMontoDol.Size = new System.Drawing.Size(110, 20);
             this.lblMontoDol.TabIndex = 5;
@@ -101,13 +103,14 @@
             this.lblTipoCuentaDol.AutoSize = true;
             this.lblTipoCuentaDol.Location = new System.Drawing.Point(27, 31);
             this.lblTipoCuentaDol.Name = "lblTipoCuentaDol";
-            this.lblTipoCuentaDol.Size = new System.Drawing.Size(71, 20);
+            this.lblTipoCuentaDol.Size = new System.Drawing.Size(78, 20);
             this.lblTipoCuentaDol.TabIndex = 3;
-            this.lblTipoCuentaDol.Text = "CA U$D";
+            this.lblTipoCuentaDol.Text = "CA USD:";
             // 
             // grbCuentaPesos
             // 
             this.grbCuentaPesos.BackColor = System.Drawing.SystemColors.Control;
+            this.grbCuentaPesos.Controls.Add(this.label2);
             this.grbCuentaPesos.Controls.Add(this.lblMontoPes);
             this.grbCuentaPesos.Controls.Add(this.lblTipoCuentaPes);
             this.grbCuentaPesos.Controls.Add(this.lblNumCuentaPes);
@@ -119,11 +122,21 @@
             this.grbCuentaPesos.Size = new System.Drawing.Size(364, 124);
             this.grbCuentaPesos.TabIndex = 6;
             this.grbCuentaPesos.TabStop = false;
-            this.grbCuentaPesos.Click += new System.EventHandler(this.grpBox_Click);
+            this.grbCuentaPesos.Click += new System.EventHandler(this.grpBoxPesos_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(27, 76);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Saldo:";
             // 
             // grbCuentaDolares
             // 
             this.grbCuentaDolares.BackColor = System.Drawing.SystemColors.Control;
+            this.grbCuentaDolares.Controls.Add(this.label3);
             this.grbCuentaDolares.Controls.Add(this.lblMontoDol);
             this.grbCuentaDolares.Controls.Add(this.lblTipoCuentaDol);
             this.grbCuentaDolares.Controls.Add(this.lblNumCuentaDol);
@@ -135,6 +148,16 @@
             this.grbCuentaDolares.Size = new System.Drawing.Size(364, 124);
             this.grbCuentaDolares.TabIndex = 7;
             this.grbCuentaDolares.TabStop = false;
+            this.grbCuentaDolares.Click += new System.EventHandler(this.grbCuentaDolares_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(27, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 20);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Saldo:";
             // 
             // groupBox3
             // 
@@ -280,5 +303,7 @@
         private System.Windows.Forms.ColumnHeader col2;
         private System.Windows.Forms.ColumnHeader col3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

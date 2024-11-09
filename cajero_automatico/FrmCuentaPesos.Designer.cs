@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnTransferirPesos = new System.Windows.Forms.Button();
-            this.btnExtraerPesos = new System.Windows.Forms.Button();
+            this.btnDepositar = new System.Windows.Forms.Button();
+            this.btnTransferir = new System.Windows.Forms.Button();
+            this.btnExtraer = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lstvMovimientosPes = new System.Windows.Forms.ListView();
             this.col0 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -53,40 +53,40 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btnDepositar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(88, 250);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(221, 97);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Depositar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDepositar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDepositar.Location = new System.Drawing.Point(88, 250);
+            this.btnDepositar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDepositar.Name = "btnDepositar";
+            this.btnDepositar.Size = new System.Drawing.Size(221, 97);
+            this.btnDepositar.TabIndex = 4;
+            this.btnDepositar.Text = "Depositar";
+            this.btnDepositar.UseVisualStyleBackColor = true;
             // 
-            // btnTransferirPesos
+            // btnTransferir
             // 
-            this.btnTransferirPesos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransferirPesos.Location = new System.Drawing.Point(317, 250);
-            this.btnTransferirPesos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnTransferirPesos.Name = "btnTransferirPesos";
-            this.btnTransferirPesos.Size = new System.Drawing.Size(221, 97);
-            this.btnTransferirPesos.TabIndex = 5;
-            this.btnTransferirPesos.Text = "Transferir";
-            this.btnTransferirPesos.UseVisualStyleBackColor = true;
-            this.btnTransferirPesos.Click += new System.EventHandler(this.btnTransferirPesos_Click);
+            this.btnTransferir.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransferir.Location = new System.Drawing.Point(317, 250);
+            this.btnTransferir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTransferir.Name = "btnTransferir";
+            this.btnTransferir.Size = new System.Drawing.Size(221, 97);
+            this.btnTransferir.TabIndex = 5;
+            this.btnTransferir.Text = "Transferir";
+            this.btnTransferir.UseVisualStyleBackColor = true;
+            this.btnTransferir.Click += new System.EventHandler(this.btnTransferir_Click);
             // 
-            // btnExtraerPesos
+            // btnExtraer
             // 
-            this.btnExtraerPesos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExtraerPesos.Location = new System.Drawing.Point(547, 250);
-            this.btnExtraerPesos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnExtraerPesos.Name = "btnExtraerPesos";
-            this.btnExtraerPesos.Size = new System.Drawing.Size(221, 97);
-            this.btnExtraerPesos.TabIndex = 6;
-            this.btnExtraerPesos.Text = "Extraer";
-            this.btnExtraerPesos.UseVisualStyleBackColor = true;
-            this.btnExtraerPesos.Click += new System.EventHandler(this.btnExtraerPesos_Click);
+            this.btnExtraer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExtraer.Location = new System.Drawing.Point(547, 250);
+            this.btnExtraer.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExtraer.Name = "btnExtraer";
+            this.btnExtraer.Size = new System.Drawing.Size(221, 97);
+            this.btnExtraer.TabIndex = 6;
+            this.btnExtraer.Text = "Extraer";
+            this.btnExtraer.UseVisualStyleBackColor = true;
+            this.btnExtraer.Click += new System.EventHandler(this.btnExtraer_Click);
             // 
             // groupBox3
             // 
@@ -110,7 +110,7 @@
             this.col3});
             this.lstvMovimientosPes.HideSelection = false;
             this.lstvMovimientosPes.Location = new System.Drawing.Point(29, 58);
-            this.lstvMovimientosPes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstvMovimientosPes.Margin = new System.Windows.Forms.Padding(4);
             this.lstvMovimientosPes.Name = "lstvMovimientosPes";
             this.lstvMovimientosPes.Size = new System.Drawing.Size(603, 259);
             this.lstvMovimientosPes.TabIndex = 2;
@@ -154,7 +154,7 @@
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(776, 250);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(221, 97);
             this.button4.TabIndex = 18;
@@ -167,9 +167,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(83, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(373, 25);
+            this.label4.Size = new System.Drawing.Size(186, 25);
             this.label4.TabIndex = 19;
-            this.label4.Text = "Consulta de Cuenta Corriente en PESOS";
+            this.label4.Text = "Consulta de Cuenta";
             // 
             // groupBox1
             // 
@@ -286,12 +286,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.btnExtraerPesos);
-            this.Controls.Add(this.btnTransferirPesos);
-            this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.btnExtraer);
+            this.Controls.Add(this.btnTransferir);
+            this.Controls.Add(this.btnDepositar);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmCuentaPesos";
-            this.Text = "FrmCuentaPesos";
+            this.Text = "\'0";
             this.Load += new System.EventHandler(this.FrmCuentaPesos_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -303,9 +303,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnTransferirPesos;
-        private System.Windows.Forms.Button btnExtraerPesos;
+        private System.Windows.Forms.Button btnDepositar;
+        private System.Windows.Forms.Button btnTransferir;
+        private System.Windows.Forms.Button btnExtraer;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button4;

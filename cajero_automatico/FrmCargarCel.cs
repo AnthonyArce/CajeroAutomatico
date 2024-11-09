@@ -94,6 +94,10 @@ namespace cajero_automatico
             companiaSeleccionada = "Tuenti";
         }
 
+        private void AgregarCompañia(object sender, EventArgs e)
+        {
+            txtCompania.Text = companiaSeleccionada;
+        }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(companiaSeleccionada))

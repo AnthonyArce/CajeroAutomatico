@@ -61,7 +61,7 @@ namespace cajero_automatico
         {
             try
             {
-                FileStream FS = new FileStream("D:\\cajero\\Cliente.txt", FileMode.Open);
+                FileStream FS = new FileStream("C:\\cajero\\Cliente.txt", FileMode.Open);
                 StreamReader SR = new StreamReader(FS);
 
                 String[] vectorregistro;
