@@ -29,21 +29,23 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCBU = new System.Windows.Forms.TextBox();
+            this.btnTransferir = new System.Windows.Forms.Button();
+            this.txtALIAS = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblMonto = new System.Windows.Forms.Label();
+            this.lblCBU = new System.Windows.Forms.Label();
+            this.lblMontoTrans = new System.Windows.Forms.Label();
+            this.lblCbuTrans = new System.Windows.Forms.Label();
+            this.lblNroCuenta = new System.Windows.Forms.Label();
+            this.lblNroCuentaTrans = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtTransferirMonto = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblALIAS = new System.Windows.Forms.Label();
+            this.lblAliasTrans = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,31 +59,32 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "CBU:";
             // 
-            // textBox1
+            // txtCBU
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(302, 278);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(207, 28);
-            this.textBox1.TabIndex = 2;
+            this.txtCBU.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCBU.Location = new System.Drawing.Point(302, 278);
+            this.txtCBU.Name = "txtCBU";
+            this.txtCBU.Size = new System.Drawing.Size(207, 28);
+            this.txtCBU.TabIndex = 2;
             // 
-            // button1
+            // btnTransferir
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(322, 418);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 79);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Transferir";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnTransferir.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransferir.Location = new System.Drawing.Point(322, 418);
+            this.btnTransferir.Name = "btnTransferir";
+            this.btnTransferir.Size = new System.Drawing.Size(179, 79);
+            this.btnTransferir.TabIndex = 3;
+            this.btnTransferir.Text = "Transferir";
+            this.btnTransferir.UseVisualStyleBackColor = true;
+            this.btnTransferir.Click += new System.EventHandler(this.btnTransferir_Click);
             // 
-            // textBox2
+            // txtALIAS
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(302, 316);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(207, 28);
-            this.textBox2.TabIndex = 4;
+            this.txtALIAS.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtALIAS.Location = new System.Drawing.Point(302, 316);
+            this.txtALIAS.Name = "txtALIAS";
+            this.txtALIAS.Size = new System.Drawing.Size(207, 28);
+            this.txtALIAS.TabIndex = 4;
             // 
             // label3
             // 
@@ -93,71 +96,71 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Alias (Opcional):";
             // 
-            // label8
+            // lblMonto
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(180, 82);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(126, 20);
-            this.label8.TabIndex = 36;
-            this.label8.Text = "1231231231231";
+            this.lblMonto.AutoSize = true;
+            this.lblMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonto.Location = new System.Drawing.Point(180, 82);
+            this.lblMonto.Name = "lblMonto";
+            this.lblMonto.Size = new System.Drawing.Size(126, 20);
+            this.lblMonto.TabIndex = 36;
+            this.lblMonto.Text = "1231231231231";
             // 
-            // label6
+            // lblCBU
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(180, 54);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 20);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "1231231231231";
+            this.lblCBU.AutoSize = true;
+            this.lblCBU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCBU.Location = new System.Drawing.Point(180, 54);
+            this.lblCBU.Name = "lblCBU";
+            this.lblCBU.Size = new System.Drawing.Size(126, 20);
+            this.lblCBU.TabIndex = 35;
+            this.lblCBU.Text = "1231231231231";
             // 
-            // label5
+            // lblMontoTrans
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(46, 82);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 20);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Saldo actual:";
+            this.lblMontoTrans.AutoSize = true;
+            this.lblMontoTrans.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMontoTrans.Location = new System.Drawing.Point(68, 82);
+            this.lblMontoTrans.Name = "lblMontoTrans";
+            this.lblMontoTrans.Size = new System.Drawing.Size(101, 20);
+            this.lblMontoTrans.TabIndex = 34;
+            this.lblMontoTrans.Text = "Saldo actual:";
             // 
-            // label1
+            // lblCbuTrans
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(46, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 20);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "CBU:";
+            this.lblCbuTrans.AutoSize = true;
+            this.lblCbuTrans.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCbuTrans.Location = new System.Drawing.Point(122, 54);
+            this.lblCbuTrans.Name = "lblCbuTrans";
+            this.lblCbuTrans.Size = new System.Drawing.Size(47, 20);
+            this.lblCbuTrans.TabIndex = 33;
+            this.lblCbuTrans.Text = "CBU:";
             // 
-            // label4
+            // lblNroCuenta
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(180, 25);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 20);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "1231231231231";
+            this.lblNroCuenta.AutoSize = true;
+            this.lblNroCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNroCuenta.Location = new System.Drawing.Point(180, 25);
+            this.lblNroCuenta.Name = "lblNroCuenta";
+            this.lblNroCuenta.Size = new System.Drawing.Size(126, 20);
+            this.lblNroCuenta.TabIndex = 32;
+            this.lblNroCuenta.Text = "1231231231231";
             // 
-            // label7
+            // lblNroCuentaTrans
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(46, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(147, 20);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Numero de Cuenta:";
+            this.lblNroCuentaTrans.AutoSize = true;
+            this.lblNroCuentaTrans.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNroCuentaTrans.Location = new System.Drawing.Point(28, 25);
+            this.lblNroCuentaTrans.Name = "lblNroCuentaTrans";
+            this.lblNroCuentaTrans.Size = new System.Drawing.Size(147, 20);
+            this.lblNroCuentaTrans.TabIndex = 31;
+            this.lblNroCuentaTrans.Text = "Numero de Cuenta:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(316, 48);
+            this.label9.Location = new System.Drawing.Point(317, 25);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(211, 26);
             this.label9.TabIndex = 30;
@@ -195,20 +198,42 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Location = new System.Drawing.Point(23, 89);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Controls.Add(this.lblALIAS);
+            this.groupBox1.Controls.Add(this.lblAliasTrans);
+            this.groupBox1.Controls.Add(this.lblMonto);
+            this.groupBox1.Controls.Add(this.lblCBU);
+            this.groupBox1.Controls.Add(this.lblMontoTrans);
+            this.groupBox1.Controls.Add(this.lblCbuTrans);
+            this.groupBox1.Controls.Add(this.lblNroCuenta);
+            this.groupBox1.Controls.Add(this.lblNroCuentaTrans);
+            this.groupBox1.Location = new System.Drawing.Point(23, 75);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(746, 124);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(746, 153);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // lblALIAS
+            // 
+            this.lblALIAS.AutoSize = true;
+            this.lblALIAS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblALIAS.Location = new System.Drawing.Point(180, 111);
+            this.lblALIAS.Name = "lblALIAS";
+            this.lblALIAS.Size = new System.Drawing.Size(126, 20);
+            this.lblALIAS.TabIndex = 38;
+            this.lblALIAS.Text = "1231231231231";
+            // 
+            // lblAliasTrans
+            // 
+            this.lblAliasTrans.AutoSize = true;
+            this.lblAliasTrans.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAliasTrans.Location = new System.Drawing.Point(109, 111);
+            this.lblAliasTrans.Name = "lblAliasTrans";
+            this.lblAliasTrans.Size = new System.Drawing.Size(60, 20);
+            this.lblAliasTrans.TabIndex = 37;
+            this.lblAliasTrans.Text = "ALIAS:";
             // 
             // FrmTransferir
             // 
@@ -222,12 +247,13 @@
             this.Controls.Add(this.txtTransferirMonto);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtALIAS);
+            this.Controls.Add(this.btnTransferir);
+            this.Controls.Add(this.txtCBU);
             this.Controls.Add(this.label2);
             this.Name = "FrmTransferir";
             this.Text = "FrmTransferir";
+            this.Load += new System.EventHandler(this.FrmTransferir_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -237,20 +263,22 @@
 
         #endregion
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCBU;
+        private System.Windows.Forms.Button btnTransferir;
+        private System.Windows.Forms.TextBox txtALIAS;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblMonto;
+        private System.Windows.Forms.Label lblCBU;
+        private System.Windows.Forms.Label lblMontoTrans;
+        private System.Windows.Forms.Label lblCbuTrans;
+        private System.Windows.Forms.Label lblNroCuenta;
+        private System.Windows.Forms.Label lblNroCuentaTrans;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtTransferirMonto;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblALIAS;
+        private System.Windows.Forms.Label lblAliasTrans;
     }
 }

@@ -81,6 +81,7 @@
             this.btnExtraerPesos.TabIndex = 6;
             this.btnExtraerPesos.Text = "Extraer";
             this.btnExtraerPesos.UseVisualStyleBackColor = true;
+            this.btnExtraerPesos.Click += new System.EventHandler(this.btnExtraerPesos_Click);
             // 
             // groupBox3
             // 

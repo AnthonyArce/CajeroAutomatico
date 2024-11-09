@@ -49,9 +49,6 @@ namespace cajero_automatico
                 alias = vectorregistro[5];
                 cbu = vectorregistro[6];
 
-                lblNroCuenta.Text = nrocuenta;
-
-
                 if (_nroCuenta == nrocuenta)
                 {
                     lblNroCuenta.Text = nrocuenta;
@@ -114,5 +111,6 @@ namespace cajero_automatico
             FrmTransferir frmTransferir = new FrmTransferir(_nroCuenta, this);
             frmTransferir.Show();
         }
+
     }
 }
