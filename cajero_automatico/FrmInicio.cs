@@ -13,43 +13,14 @@ namespace cajero_automatico
 {
     public partial class FrmInicio : Form
     {
+        private bool passVisible = false;
         public FrmInicio()
         {
             InitializeComponent();
-            txtPin.PasswordChar = '*';
-            txtPin.MaxLength = 4;
-
-            btnVerPin.MouseDown += BtnVerPin_MouseDown;
-            btnVerPin.MouseUp += BtnVerPin_MouseUp;
-
             btnCancelar.Click += BtnCancelar_Click;
-        }
-        private void txtPin_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            txtPin.PasswordChar = '*';
         }
 
-        private void BtnVerPin_MouseDown(object sender, MouseEventArgs e)
-        {
-            txtPin.PasswordChar = '\0';
-        }
-
-        private void BtnVerPin_MouseUp(object sender, MouseEventArgs e)
-        {
-            txtPin.PasswordChar = '*';  
-        }
-
-        // Evento KeyPress para permitir solo números
-        private void txtNumeroCel_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
@@ -100,7 +71,7 @@ namespace cajero_automatico
             
         }
 
-        private void btnIngresar_Click(object sender, EventArgs e)
+        private void btnEnter_Click(object sender, EventArgs e)
         {
             bool isUserValido  = false;
 
@@ -119,6 +90,19 @@ namespace cajero_automatico
                 MessageBox.Show($"Usuario o contraseña invalida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
+        }
+
+        private void btnVerPin_Click(object sender, EventArgs e)
+        {
+            if (passVisible)
+            {
+                passVisible = false;
+                txtPin.PasswordChar = '*';
+            }
+            else {
+                passVisible = true;
+                txtPin.PasswordChar = '\0';
+            }
         }
     }
 }
