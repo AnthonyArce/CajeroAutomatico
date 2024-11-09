@@ -52,6 +52,8 @@
             this.btn1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtMonto = new System.Windows.Forms.TextBox();
+            this.btnInicio = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.grbPad.SuspendLayout();
             this.SuspendLayout();
@@ -59,10 +61,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(306, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(465, 32);
+            this.label1.Size = new System.Drawing.Size(401, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Compra / Venta de Moneda Dólar";
             // 
@@ -78,7 +80,6 @@
             this.groupBox1.Size = new System.Drawing.Size(707, 115);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // lblVentaDolar
             // 
@@ -133,6 +134,7 @@
             // cmbOperacion
             // 
             this.cmbOperacion.FormattingEnabled = true;
+            this.cmbOperacion.ItemHeight = 16;
             this.cmbOperacion.Items.AddRange(new object[] {
             "COMPRAR",
             "VENDER"});
@@ -308,11 +310,32 @@
             // 
             // txtMonto
             // 
+            this.txtMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMonto.Location = new System.Drawing.Point(501, 255);
             this.txtMonto.Multiline = true;
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(153, 36);
             this.txtMonto.TabIndex = 23;
+            // 
+            // btnInicio
+            // 
+            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.Location = new System.Drawing.Point(53, 560);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(117, 58);
+            this.btnInicio.TabIndex = 46;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.UseVisualStyleBackColor = true;
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.Location = new System.Drawing.Point(53, 634);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(117, 58);
+            this.btnAtras.TabIndex = 45;
+            this.btnAtras.Text = "Atrás";
+            this.btnAtras.UseVisualStyleBackColor = true;
             // 
             // FrmCompraVenta
             // 
@@ -320,6 +343,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1064, 755);
+            this.Controls.Add(this.btnInicio);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.txtMonto);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.grbPad);
@@ -364,5 +389,7 @@
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtMonto;
+        private System.Windows.Forms.Button btnInicio;
+        private System.Windows.Forms.Button btnAtras;
     }
 }
